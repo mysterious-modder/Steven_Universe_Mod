@@ -1,0 +1,53 @@
+{
+  "garnet_living": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "stevenuniverseworld:sfx_garnet_stagecomplete1-_1",
+        "stream": false
+      },
+      {
+        "name": "stevenuniverseworld:sfx_garnet_stagestart1-_1",
+        "stream": false
+      },
+      {
+        "name": "stevenuniverseworld:anyconv.com__sfx_garnet_stagestart2_1",
+        "stream": false
+      }
+    ]
+  },
+  "garnet_hurt": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "stevenuniverseworld:sfx_garnet_hurt1-_256",
+        "stream": false
+      },
+      {
+        "name": "stevenuniverseworld:sfx_garnet_hurt2-_228",
+        "stream": false
+      },
+      {
+        "name": "stevenuniverseworld:sfx_garnet_lowharmony2-_155",
+        "stream": false
+      },
+      {
+        "name": "stevenuniverseworld:sfx_garnet_lowhealth1-_176",
+        "stream": false
+      }
+    ]
+  },
+  "garnet_dies": {
+    "category": "voice",
+    "sounds": [
+      {
+        "name": "stevenuniverseworld:sfx_garnet_defeated1-_150",
+        "stream": false
+      },
+      {
+        "name": "stevenuniverseworld:sfx_garnet_defeated2-_194",
+        "stream": false
+      }
+    ]
+  }
+}

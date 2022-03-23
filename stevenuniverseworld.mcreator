@@ -1,0 +1,85 @@
+{
+  "mod_elements": [
+    {
+      "name": "RoseSword",
+      "type": "tool",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rose_sword"
+    },
+    {
+      "name": "Garnet",
+      "type": "livingentity",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "garnet"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "garnet_living",
+      "files": [
+        "sfx_garnet_stagecomplete1-_1",
+        "sfx_garnet_stagestart1-_1",
+        "anyconv.com__sfx_garnet_stagestart2_1"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "garnet_hurt",
+      "files": [
+        "sfx_garnet_hurt1-_256",
+        "sfx_garnet_hurt2-_228",
+        "sfx_garnet_lowharmony2-_155",
+        "sfx_garnet_lowhealth1-_176"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "garnet_dies",
+      "files": [
+        "sfx_garnet_defeated1-_150",
+        "sfx_garnet_defeated2-_194"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.stevenuniverseworld.rose_sword": "Rose Sword",
+      "subtitles.garnet_hurt": "",
+      "entity.stevenuniverseworld.garnet": "Garnet",
+      "subtitles.garnet_living": "",
+      "subtitles.garnet_dies": "",
+      "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "stevenuniverseworld",
+    "modName": "StevenUniverseWorld",
+    "version": "1.0.0",
+    "author": "pedro, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.mcreator.stevenuniverseworld",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}
