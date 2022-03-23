@@ -1,0 +1,40 @@
+{
+  "_fv": 24,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "garnet_gem",
+    "customModelName": "Normal",
+    "name": "Garnet Gem",
+    "rarity": "EPIC",
+    "creativeTab": {
+      "value": "CUSTOM:Gems"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 1,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "GarnetSpawnGem"
+    },
+    "onRightClickedOnBlock": {
+      "name": "GarnetSpawnGem"
+    },
+    "hasDispenseBehavior": false
+  }
+}

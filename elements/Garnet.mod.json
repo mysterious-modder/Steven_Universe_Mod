@@ -77,7 +77,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:GarnetGem"
     },
     "livingSound": {
       "value": "CUSTOM:garnet_living"
@@ -113,8 +113,8 @@
     "doesDespawnWhenIdle": true,
     "spawningProbability": 20,
     "mobSpawningType": "ambient",
-    "minNumberOfMobsPerGroup": 3,
-    "maxNumberOfMobsPerGroup": 10,
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [],
     "spawnInDungeons": false
   }

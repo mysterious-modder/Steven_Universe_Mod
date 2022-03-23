@@ -15,6 +15,42 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "garnet"
+    },
+    {
+      "name": "Gems",
+      "type": "tab",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gems"
+    },
+    {
+      "name": "GarnetSpawnGem",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "garnet_spawn_gem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GarnetGem",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "garnet_gem"
     }
   ],
   "variable_elements": [],
@@ -54,9 +90,11 @@
     "en_us": {
       "item.stevenuniverseworld.rose_sword": "Rose Sword",
       "subtitles.garnet_hurt": "",
+      "itemGroup.tabgems": "Gems",
       "entity.stevenuniverseworld.garnet": "Garnet",
       "subtitles.garnet_living": "",
       "subtitles.garnet_dies": "",
+      "item.stevenuniverseworld.garnet_gem": "Garnet Gem",
       "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg"
     }
   },
