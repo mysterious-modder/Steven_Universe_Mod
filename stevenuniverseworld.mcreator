@@ -51,6 +51,42 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "garnet_gem"
+    },
+    {
+      "name": "Ruby",
+      "type": "livingentity",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby"
+    },
+    {
+      "name": "RubySpawnGem",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_spawn_gem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RubyGem",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruby_gem"
     }
   ],
   "variable_elements": [],
@@ -92,9 +128,12 @@
       "subtitles.garnet_hurt": "",
       "itemGroup.tabgems": "Gems",
       "entity.stevenuniverseworld.garnet": "Garnet",
+      "entity.stevenuniverseworld.ruby": "Ruby",
       "subtitles.garnet_living": "",
       "subtitles.garnet_dies": "",
+      "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
       "item.stevenuniverseworld.garnet_gem": "Garnet Gem",
+      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
       "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg"
     }
   },
@@ -108,7 +147,7 @@
     "version": "1.0.0",
     "author": "pedro, MCreator",
     "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -116,6 +155,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.stevenuniverseworld",
     "lockBaseModFiles": false
   },
