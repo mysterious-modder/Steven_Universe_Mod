@@ -25,34 +25,6 @@
       "registry_name": "gems"
     },
     {
-      "name": "GarnetSpawnGem",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "garnet_spawn_gem",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GarnetGem",
-      "type": "item",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "garnet_gem"
-    },
-    {
       "name": "Ruby",
       "type": "livingentity",
       "sortid": 5,
@@ -123,6 +95,106 @@
           }
         ]
       }
+    },
+    {
+      "name": "Fuse",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "garnetfuse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GarnetUnfuse",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "garnet_unfuse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Itens",
+      "type": "tab",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itens"
+    },
+    {
+      "name": "WhiteControl",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_control",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WhiteStaff",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_staff"
     }
   ],
   "variable_elements": [],
@@ -169,11 +241,12 @@
       "subtitles.garnet_hurt": "",
       "itemGroup.tabgems": "Gems",
       "entity.stevenuniverseworld.ruby": "Ruby",
+      "itemGroup.tabitens": "Itens",
       "entity.stevenuniverseworld.sapphire": "Sapphire",
       "subtitles.garnet_dies": "",
       "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
-      "item.stevenuniverseworld.garnet_gem": "Garnet Gem",
-      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg"
+      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
+      "item.stevenuniverseworld.white_staff": "White Staff"
     }
   },
   "foldersRoot": {
