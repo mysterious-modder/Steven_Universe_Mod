@@ -87,6 +87,42 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "ruby_gem"
+    },
+    {
+      "name": "SapphireGem",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sapphire_gem"
+    },
+    {
+      "name": "Sapphire",
+      "type": "livingentity",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sapphire"
+    },
+    {
+      "name": "SapphireSpawnGem",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sapphire_spawn_gem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -125,16 +161,19 @@
   "language_map": {
     "en_us": {
       "item.stevenuniverseworld.rose_sword": "Rose Sword",
+      "entity.stevenuniverseworld.garnet": "Garnet",
+      "subtitles.garnet_living": "",
+      "item.stevenuniverseworld.sapphire_gem": "Sapphire Gem",
+      "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg",
+      "item.stevenuniverseworld.sapphire_spawn_egg": "Sapphire Spawn Egg",
       "subtitles.garnet_hurt": "",
       "itemGroup.tabgems": "Gems",
-      "entity.stevenuniverseworld.garnet": "Garnet",
       "entity.stevenuniverseworld.ruby": "Ruby",
-      "subtitles.garnet_living": "",
+      "entity.stevenuniverseworld.sapphire": "Sapphire",
       "subtitles.garnet_dies": "",
       "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
       "item.stevenuniverseworld.garnet_gem": "Garnet Gem",
-      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
-      "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg"
+      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg"
     }
   },
   "foldersRoot": {

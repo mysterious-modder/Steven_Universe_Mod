@@ -1,13 +1,16 @@
 {
   "item.stevenuniverseworld.rose_sword": "Rose Sword",
+  "entity.stevenuniverseworld.garnet": "Garnet",
+  "subtitles.garnet_living": "",
+  "item.stevenuniverseworld.sapphire_gem": "Sapphire Gem",
+  "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg",
+  "item.stevenuniverseworld.sapphire_spawn_egg": "Sapphire Spawn Egg",
   "subtitles.garnet_hurt": "",
   "itemGroup.tabgems": "Gems",
-  "entity.stevenuniverseworld.garnet": "Garnet",
   "entity.stevenuniverseworld.ruby": "Ruby",
-  "subtitles.garnet_living": "",
+  "entity.stevenuniverseworld.sapphire": "Sapphire",
   "subtitles.garnet_dies": "",
   "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
   "item.stevenuniverseworld.garnet_gem": "Garnet Gem",
-  "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
-  "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg"
+  "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg"
 }
