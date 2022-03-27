@@ -2,6 +2,7 @@ package net.mcreator.stevenuniverseworld.procedures;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.TameableEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.stevenuniverseworld.StevenuniverseworldMod;
@@ -26,6 +27,17 @@ public class WhiteControlProcedure {
 		if ((entity instanceof TameableEntity) && (sourceentity instanceof PlayerEntity)) {
 			((TameableEntity) entity).setTamed(true);
 			((TameableEntity) entity).setTamedBy((PlayerEntity) sourceentity);
+		}
+		if ((entity instanceof TameableEntity && sourceentity instanceof LivingEntity)
+				? ((TameableEntity) entity).isOwner((LivingEntity) sourceentity)
+				: false) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"kill");
+				}
+			}
 		}
 	}
 }

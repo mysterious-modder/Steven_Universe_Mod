@@ -46,11 +46,17 @@ public class FuseProcedure {
 				StevenuniverseworldMod.LOGGER.warn("Failed to load dependency entity for procedure Fuse!");
 			return;
 		}
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				StevenuniverseworldMod.LOGGER.warn("Failed to load dependency sourceentity for procedure Fuse!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		if (((Entity) world
 				.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
 						new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
@@ -59,6 +65,7 @@ public class FuseProcedure {
 						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 					}
 				}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) {
+			sourceentity.startRiding(entity);
 			if (!entity.world.isRemote())
 				entity.remove();
 			if (!((Entity) world
