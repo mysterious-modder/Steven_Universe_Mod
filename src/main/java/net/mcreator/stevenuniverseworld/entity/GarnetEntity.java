@@ -47,18 +47,12 @@ import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
 
-import net.mcreator.stevenuniverseworld.procedures.GarnetUnfuseProcedure;
+import net.mcreator.stevenuniverseworld.item.WhiteDiamondItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.GarnetRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
-
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
 
 @StevenuniverseworldModElements.ModElement.Tag
 public class GarnetEntity extends StevenuniverseworldModElements.ModElement {
@@ -174,21 +168,6 @@ public class GarnetEntity extends StevenuniverseworldModElements.ModElement {
 		}
 
 		@Override
-		public void onDeath(DamageSource source) {
-			super.onDeath(source);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = source.getTrueSource();
-			Entity entity = this;
-
-			GarnetUnfuseProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-
-		@Override
 		public ActionResultType func_230254_b_(PlayerEntity sourceentity, Hand hand) {
 			ItemStack itemstack = sourceentity.getHeldItem(hand);
 			ActionResultType retval = ActionResultType.func_233537_a_(this.world.isRemote());
@@ -245,6 +224,8 @@ public class GarnetEntity extends StevenuniverseworldModElements.ModElement {
 		public boolean isBreedingItem(ItemStack stack) {
 			if (stack == null)
 				return false;
+			if (WhiteDiamondItem.block == stack.getItem())
+				return true;
 			return false;
 		}
 	}

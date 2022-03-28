@@ -169,34 +169,6 @@
       "registry_name": "itens"
     },
     {
-      "name": "WhiteControl",
-      "type": "procedure",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "white_control",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "WhiteStaff",
-      "type": "item",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "white_staff"
-    },
-    {
       "name": "WhiteDiamond",
       "type": "item",
       "sortid": 14,
@@ -219,14 +191,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "white_diamond_ore_smelting"
-    },
-    {
-      "name": "WhiteStaffRecipe",
-      "type": "recipe",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "white_staff_recipe"
     },
     {
       "name": "YellowDiamond",
@@ -301,14 +265,6 @@
       "registry_name": "pink_diamond_ore_smelting"
     },
     {
-      "name": "GemEntity",
-      "type": "tag",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gem_entity"
-    },
-    {
       "name": "Destabilize",
       "type": "procedure",
       "sortid": 40,
@@ -319,6 +275,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -375,6 +335,22 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "pink_staff_recipe"
+    },
+    {
+      "name": "Light",
+      "type": "tag",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light"
+    },
+    {
+      "name": "BlueUnfuser",
+      "type": "item",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_unfuser"
     }
   ],
   "variable_elements": [],
@@ -426,10 +402,10 @@
       "entity.stevenuniverseworld.ruby": "Ruby",
       "entity.stevenuniverseworld.sapphire": "Sapphire",
       "item.stevenuniverseworld.white_diamond": "White Diamond",
-      "item.stevenuniverseworld.white_staff": "White Staff",
       "block.stevenuniverseworld.pink_diamond_ore": "Pink Diamond Ore",
       "item.stevenuniverseworld.rose_sword": "Rose Sword",
       "item.stevenuniverseworld.yellow_diamond": "Yellow Diamond",
+      "item.stevenuniverseworld.blue_unfuser": "Blue Unfuser",
       "block.stevenuniverseworld.white_diamond_ore": "White Diamond Ore",
       "itemGroup.tabitens": "Itens",
       "subtitles.garnet_dies": "",
@@ -453,10 +429,10 @@
       "entity.stevenuniverseworld.ruby": "Rubi",
       "entity.stevenuniverseworld.sapphire": "Safira",
       "item.stevenuniverseworld.white_diamond": "Diamante Branca",
-      "item.stevenuniverseworld.white_staff": "Cajado Branco",
       "block.stevenuniverseworld.pink_diamond_ore": "Minério de Diamante Rosa",
       "item.stevenuniverseworld.rose_sword": "Espada de Rose",
       "item.stevenuniverseworld.yellow_diamond": "Diamante Amarela",
+      "item.stevenuniverseworld.blue_unfuser": "Blue Unfuser",
       "block.stevenuniverseworld.white_diamond_ore": "Minério de Diamante Branco",
       "itemGroup.tabitens": "Itens",
       "subtitles.garnet_dies": "",

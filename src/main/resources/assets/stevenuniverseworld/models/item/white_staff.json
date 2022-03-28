@@ -1,7 +1,0 @@
-{
-  "parent": "stevenuniverseworld:custom/white_staff",
-  "textures": {
-    "0": "stevenuniverseworld:blocks/whitestafftexture",
-    "particle": "stevenuniverseworld:items/white_staff"
-  }
-}

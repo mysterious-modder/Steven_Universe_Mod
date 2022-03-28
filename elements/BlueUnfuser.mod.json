@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 1,
-    "texture": "white_staff",
-    "customModelName": "white_staff:default",
-    "name": "White Staff",
+    "texture": "blue_gem_distabilizer",
+    "customModelName": "blue_gem_distabilizer:default",
+    "name": "Blue Unfuser",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:Itens"
@@ -14,7 +14,7 @@
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 0,
+    "damageCount": 2000,
     "recipeRemainder": {
       "value": ""
     },
@@ -23,14 +23,14 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": true,
-    "damageVsEntity": 0.0,
+    "damageVsEntity": 2.0,
     "specialInfo": [],
-    "hasGlow": true,
+    "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onEntityHitWith": {
-      "name": "WhiteControl"
+      "name": "Destabilize"
     },
     "hasDispenseBehavior": false
   }

@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/blue_gem_distabilizer",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/bgd_texture",
+    "particle": "stevenuniverseworld:items/blue_gem_distabilizer"
+  }
+}

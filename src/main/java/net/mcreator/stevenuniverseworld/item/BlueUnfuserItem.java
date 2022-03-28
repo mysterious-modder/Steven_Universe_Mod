@@ -2,8 +2,6 @@
 package net.mcreator.stevenuniverseworld.item;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.item.Rarity;
@@ -16,7 +14,7 @@ import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.stevenuniverseworld.procedures.WhiteControlProcedure;
+import net.mcreator.stevenuniverseworld.procedures.DestabilizeProcedure;
 import net.mcreator.stevenuniverseworld.itemgroup.ItensItemGroup;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
 
@@ -29,12 +27,12 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
 @StevenuniverseworldModElements.ModElement.Tag
-public class WhiteStaffItem extends StevenuniverseworldModElements.ModElement {
-	@ObjectHolder("stevenuniverseworld:white_staff")
+public class BlueUnfuserItem extends StevenuniverseworldModElements.ModElement {
+	@ObjectHolder("stevenuniverseworld:blue_unfuser")
 	public static final Item block = null;
 
-	public WhiteStaffItem(StevenuniverseworldModElements instance) {
-		super(instance, 12);
+	public BlueUnfuserItem(StevenuniverseworldModElements instance) {
+		super(instance, 45);
 	}
 
 	@Override
@@ -44,8 +42,8 @@ public class WhiteStaffItem extends StevenuniverseworldModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItensItemGroup.tab).maxStackSize(1).isImmuneToFire().rarity(Rarity.EPIC));
-			setRegistryName("white_staff");
+			super(new Item.Properties().group(ItensItemGroup.tab).maxDamage(2000).isImmuneToFire().rarity(Rarity.EPIC));
+			setRegistryName("blue_unfuser");
 		}
 
 		@Override
@@ -69,17 +67,11 @@ public class WhiteStaffItem extends StevenuniverseworldModElements.ModElement {
 				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 				builder.putAll(super.getAttributeModifiers(slot));
 				builder.put(Attributes.ATTACK_DAMAGE,
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Item modifier", (double) -2, AttributeModifier.Operation.ADDITION));
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Item modifier", (double) 0, AttributeModifier.Operation.ADDITION));
 				builder.put(Attributes.ATTACK_SPEED,
 						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Item modifier", -2.4, AttributeModifier.Operation.ADDITION));
 			}
 			return super.getAttributeModifiers(slot);
-		}
-
-		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
 		}
 
 		@Override
@@ -90,7 +82,7 @@ public class WhiteStaffItem extends StevenuniverseworldModElements.ModElement {
 			double z = entity.getPosZ();
 			World world = entity.world;
 
-			WhiteControlProcedure.executeProcedure(
+			DestabilizeProcedure.executeProcedure(
 					Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("sourceentity", sourceentity))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
