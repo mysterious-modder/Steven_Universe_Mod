@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/yellow_gem_destabilizer",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/ygd_texture",
+    "particle": "stevenuniverseworld:items/yellow_gem_destabilizer"
+  }
+}

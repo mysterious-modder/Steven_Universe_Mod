@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "stevenuniverseworld:blocks/whitediamond_ore",
+    "particle": "stevenuniverseworld:blocks/whitediamond_ore"
+  }
+}

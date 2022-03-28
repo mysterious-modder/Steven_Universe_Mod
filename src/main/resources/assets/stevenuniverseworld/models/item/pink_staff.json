@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/pink_staff",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/pink_staff_texture",
+    "particle": "stevenuniverseworld:items/pink_staff"
+  }
+}

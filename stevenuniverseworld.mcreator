@@ -110,10 +110,6 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -199,6 +195,186 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "white_staff"
+    },
+    {
+      "name": "WhiteDiamond",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_diamond"
+    },
+    {
+      "name": "WhiteDiamondOre",
+      "type": "block",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_diamond_ore"
+    },
+    {
+      "name": "WhiteDiamondOreSmelting",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_diamond_ore_smelting"
+    },
+    {
+      "name": "WhiteStaffRecipe",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_staff_recipe"
+    },
+    {
+      "name": "YellowDiamond",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_diamond"
+    },
+    {
+      "name": "YellowDiamondOre",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_diamond_ore"
+    },
+    {
+      "name": "YellowDiamondOreSmelting",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_diamond_ore_smelting"
+    },
+    {
+      "name": "BlueDiamond",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond"
+    },
+    {
+      "name": "BlueDiamondOre",
+      "type": "block",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond_ore"
+    },
+    {
+      "name": "BlueDiamondOreSmelting",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond_ore_smelting"
+    },
+    {
+      "name": "PinkDiamond",
+      "type": "item",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_diamond"
+    },
+    {
+      "name": "PinkDiamondOre",
+      "type": "block",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_diamond_ore"
+    },
+    {
+      "name": "PinkDiamondOreSmelting",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_diamond_ore_smelting"
+    },
+    {
+      "name": "GemEntity",
+      "type": "tag",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gem_entity"
+    },
+    {
+      "name": "Destabilize",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destabilize",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "YellowDestabilizer",
+      "type": "item",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_destabilizer"
+    },
+    {
+      "name": "YDestabilizerRecipe",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "y_destabilizer_recipe"
+    },
+    {
+      "name": "PinkFreedom",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_freedom",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PinkStaff",
+      "type": "item",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_staff"
+    },
+    {
+      "name": "PinkStaffRecipe",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_staff_recipe"
     }
   ],
   "variable_elements": [],
@@ -236,21 +412,58 @@
   ],
   "language_map": {
     "en_us": {
-      "item.stevenuniverseworld.rose_sword": "Rose Sword",
+      "item.stevenuniverseworld.pink_diamond": "Pink Diamond",
       "entity.stevenuniverseworld.garnet": "Garnet",
+      "block.stevenuniverseworld.blue_diamond_ore": "Blue Diamond Ore",
       "subtitles.garnet_living": "",
       "item.stevenuniverseworld.sapphire_gem": "Sapphire Gem",
       "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg",
       "item.stevenuniverseworld.sapphire_spawn_egg": "Sapphire Spawn Egg",
+      "block.stevenuniverseworld.yellow_diamond_ore": "Yellow Diamond Ore",
+      "item.stevenuniverseworld.yellow_destabilizer": "Yellow Destabilizer",
+      "itemGroup.tabgems": "Gems",
+      "subtitles.garnet_hurt": "",
+      "entity.stevenuniverseworld.ruby": "Ruby",
+      "entity.stevenuniverseworld.sapphire": "Sapphire",
+      "item.stevenuniverseworld.white_diamond": "White Diamond",
+      "item.stevenuniverseworld.white_staff": "White Staff",
+      "block.stevenuniverseworld.pink_diamond_ore": "Pink Diamond Ore",
+      "item.stevenuniverseworld.rose_sword": "Rose Sword",
+      "item.stevenuniverseworld.yellow_diamond": "Yellow Diamond",
+      "block.stevenuniverseworld.white_diamond_ore": "White Diamond Ore",
+      "itemGroup.tabitens": "Itens",
+      "subtitles.garnet_dies": "",
+      "item.stevenuniverseworld.blue_diamond": "Blue Diamond",
+      "item.stevenuniverseworld.pink_staff": "Pink Staff",
+      "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
+      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg"
+    },
+    "pt_br": {
+      "item.stevenuniverseworld.pink_diamond": "Diamante Rosa",
+      "entity.stevenuniverseworld.garnet": "Garnet",
+      "block.stevenuniverseworld.blue_diamond_ore": "Minério de Diamante Azul",
+      "subtitles.garnet_living": "",
+      "item.stevenuniverseworld.sapphire_gem": "Gem de Safira",
+      "item.stevenuniverseworld.garnet_spawn_egg": "Ovo de Garnet",
+      "item.stevenuniverseworld.sapphire_spawn_egg": "Ovo de Safira",
+      "block.stevenuniverseworld.yellow_diamond_ore": "Minério de Diamante Amarelo",
+      "item.stevenuniverseworld.yellow_destabilizer": "Desestabilizador amarelo",
       "subtitles.garnet_hurt": "",
       "itemGroup.tabgems": "Gems",
-      "entity.stevenuniverseworld.ruby": "Ruby",
+      "entity.stevenuniverseworld.ruby": "Rubi",
+      "entity.stevenuniverseworld.sapphire": "Safira",
+      "item.stevenuniverseworld.white_diamond": "Diamante Branca",
+      "item.stevenuniverseworld.white_staff": "Cajado Branco",
+      "block.stevenuniverseworld.pink_diamond_ore": "Minério de Diamante Rosa",
+      "item.stevenuniverseworld.rose_sword": "Espada de Rose",
+      "item.stevenuniverseworld.yellow_diamond": "Diamante Amarela",
+      "block.stevenuniverseworld.white_diamond_ore": "Minério de Diamante Branco",
       "itemGroup.tabitens": "Itens",
-      "entity.stevenuniverseworld.sapphire": "Sapphire",
       "subtitles.garnet_dies": "",
-      "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
-      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
-      "item.stevenuniverseworld.white_staff": "White Staff"
+      "item.stevenuniverseworld.blue_diamond": "Diamante Azul",
+      "item.stevenuniverseworld.pink_staff": "Pink Staff",
+      "item.stevenuniverseworld.ruby_gem": "Gem de Rubi",
+      "item.stevenuniverseworld.ruby_spawn_egg": "Ovo de Rubi"
     }
   },
   "foldersRoot": {

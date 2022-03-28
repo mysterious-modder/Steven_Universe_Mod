@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "stevenuniverseworld:blocks/pinkdiamond_ore",
+    "particle": "stevenuniverseworld:blocks/pinkdiamond_ore"
+  }
+}
