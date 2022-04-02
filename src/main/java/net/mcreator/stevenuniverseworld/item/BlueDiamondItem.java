@@ -27,7 +27,7 @@ public class BlueDiamondItem extends StevenuniverseworldModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(GemsItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(GemsItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("blue_diamond");
 		}
 

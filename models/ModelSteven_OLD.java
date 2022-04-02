@@ -128,15 +128,15 @@ public static class ModelSteven_OLD extends EntityModel<Entity> {
 		Head_r1.setTextureOffset(17, 0).addBox(-0.5F, -0.5F, -0.5F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 
 		RightArm = new ModelRenderer(this);
-		RightArm.setRotationPoint(-3.4291F, 10.1796F, 0.5F);
-		setRotationAngle(RightArm, 3.1416F, 0.0F, 3.1416F);
-		RightArm.setTextureOffset(0, 29).addBox(0.3671F, 0.8215F, -1.5F, 3.0F, 7.0F, 3.0F, 0.0F, false);
-		RightArm.setTextureOffset(50, 25).addBox(1.0F, 6.8F, -1.5F, 3.0F, 1.0F, 3.0F, 0.0F, false);
+		RightArm.setRotationPoint(-3.1791F, 10.1796F, 0.5F);
+		setRotationAngle(RightArm, 0.0F, 0.0F, 0.0F);
+		RightArm.setTextureOffset(0, 29).addBox(-3.6329F, 0.8215F, -1.5F, 3.0F, 7.0F, 3.0F, 0.0F, false);
+		RightArm.setTextureOffset(50, 25).addBox(-4.5F, 6.8F, -1.5F, 3.0F, 1.0F, 3.0F, 0.0F, false);
 
 		RightArm_r1 = new ModelRenderer(this);
-		RightArm_r1.setRotationPoint(-0.3331F, 0.3517F, 0.0F);
+		RightArm_r1.setRotationPoint(-0.3331F, -0.3983F, 0.0F);
 		RightArm.addChild(RightArm_r1);
-		setRotationAngle(RightArm_r1, 0.0F, 0.0F, -1.0472F);
+		setRotationAngle(RightArm_r1, 0.0F, 0.0F, 1.0472F);
 		RightArm_r1.setTextureOffset(53, 3).addBox(-0.55F, -0.567F, -1.5F, 2.0F, 4.0F, 3.0F, 0.0F, false);
 
 		LeftArm = new ModelRenderer(this);

@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/yellow_sword",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/yellow_sword",
+    "particle": "stevenuniverseworld:items/yellow-sword"
+  }
+}

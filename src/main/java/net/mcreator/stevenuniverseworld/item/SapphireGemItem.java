@@ -43,7 +43,7 @@ public class SapphireGemItem extends StevenuniverseworldModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(GemsItemGroup.tab).maxStackSize(64).isImmuneToFire().rarity(Rarity.RARE));
+			super(new Item.Properties().group(GemsItemGroup.tab).maxStackSize(1).isImmuneToFire().rarity(Rarity.RARE));
 			setRegistryName("sapphire_gem");
 		}
 

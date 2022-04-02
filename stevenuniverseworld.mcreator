@@ -276,10 +276,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
           }
         ]
       }
@@ -359,6 +355,104 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "steven_universe"
+    },
+    {
+      "name": "PinkSteven",
+      "type": "livingentity",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_steven"
+    },
+    {
+      "name": "SummonPinkGem",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summon_pink_gem",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondGem",
+      "type": "tag",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_gem"
+    },
+    {
+      "name": "YellowArmourArmor",
+      "type": "armor",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_armour_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "YellowArmourArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_armour_armor_helmet_recipe"
+    },
+    {
+      "name": "YellowArmourArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_armour_armor_body_recipe"
+    },
+    {
+      "name": "YellowArmourArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_armour_armor_leggings_recipe"
+    },
+    {
+      "name": "YellowArmourArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_armour_armor_boots_recipe"
+    },
+    {
+      "name": "YellowSword",
+      "type": "tool",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_sword"
+    },
+    {
+      "name": "YellowSwordRecipe",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_sword_recipe"
     }
   ],
   "variable_elements": [],
@@ -397,7 +491,7 @@
   "language_map": {
     "en_us": {
       "item.stevenuniverseworld.steven_universe_spawn_egg": "Steven Universe Spawn Egg",
-      "item.stevenuniverseworld.pink_diamond": "Pink Diamond",
+      "item.stevenuniverseworld.pink_diamond": "PinkDiamond",
       "block.stevenuniverseworld.blue_diamond_ore": "Blue Diamond Ore",
       "entity.stevenuniverseworld.garnet": "Garnet",
       "subtitles.garnet_living": "",
@@ -406,23 +500,30 @@
       "item.stevenuniverseworld.sapphire_spawn_egg": "Sapphire Spawn Egg",
       "block.stevenuniverseworld.yellow_diamond_ore": "Yellow Diamond Ore",
       "item.stevenuniverseworld.yellow_destabilizer": "Yellow Destabilizer",
-      "subtitles.garnet_hurt": "",
+      "item.stevenuniverseworld.yellow_sword": "Yellow Sword",
       "itemGroup.tabgems": "Gems",
+      "subtitles.garnet_hurt": "",
       "entity.stevenuniverseworld.ruby": "Ruby",
       "entity.stevenuniverseworld.sapphire": "Sapphire",
-      "item.stevenuniverseworld.white_diamond": "White Diamond",
+      "item.stevenuniverseworld.white_diamond": "WhiteDiamond",
+      "item.stevenuniverseworld.yellow_armour_armor_leggings": "YellowArmour Leggings",
       "block.stevenuniverseworld.pink_diamond_ore": "Pink Diamond Ore",
       "item.stevenuniverseworld.rose_sword": "Rose Sword",
+      "entity.stevenuniverseworld.pink_steven": "Pink Steven",
       "entity.stevenuniverseworld.steven_universe": "Steven Universe",
-      "item.stevenuniverseworld.yellow_diamond": "Yellow Diamond",
+      "item.stevenuniverseworld.yellow_diamond": "YellowDiamond",
+      "item.stevenuniverseworld.yellow_armour_armor_boots": "YellowArmour Boots",
       "item.stevenuniverseworld.blue_unfuser": "Blue Destabilizer",
       "block.stevenuniverseworld.white_diamond_ore": "White Diamond Ore",
+      "item.stevenuniverseworld.yellow_armour_armor_chestplate": "YellowArmour Chestplate",
       "itemGroup.tabitens": "Itens",
       "subtitles.garnet_dies": "",
-      "item.stevenuniverseworld.blue_diamond": "Blue Diamond",
+      "item.stevenuniverseworld.blue_diamond": "BlueDiamond",
       "item.stevenuniverseworld.pink_staff": "Pink Staff",
       "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
-      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg"
+      "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
+      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
+      "item.stevenuniverseworld.yellow_armour_armor_helmet": "YellowArmour Helmet"
     },
     "pt_br": {
       "item.stevenuniverseworld.steven_universe_spawn_egg": "Steven Universe Spawn Egg",
@@ -435,23 +536,30 @@
       "item.stevenuniverseworld.sapphire_spawn_egg": "Ovo de Safira",
       "block.stevenuniverseworld.yellow_diamond_ore": "Minério de Diamante Amarelo",
       "item.stevenuniverseworld.yellow_destabilizer": "Desestabilizador amarelo",
-      "itemGroup.tabgems": "Gems",
+      "item.stevenuniverseworld.yellow_sword": "Yellow Sword",
       "subtitles.garnet_hurt": "",
+      "itemGroup.tabgems": "Gems",
       "entity.stevenuniverseworld.ruby": "Rubi",
       "entity.stevenuniverseworld.sapphire": "Safira",
       "item.stevenuniverseworld.white_diamond": "Diamante Branca",
+      "item.stevenuniverseworld.yellow_armour_armor_leggings": "YellowArmour Leggings",
       "block.stevenuniverseworld.pink_diamond_ore": "Minério de Diamante Rosa",
       "item.stevenuniverseworld.rose_sword": "Espada de Rose",
+      "entity.stevenuniverseworld.pink_steven": "Pink Steven",
       "entity.stevenuniverseworld.steven_universe": "Steven Universe",
       "item.stevenuniverseworld.yellow_diamond": "Diamante Amarela",
+      "item.stevenuniverseworld.yellow_armour_armor_boots": "YellowArmour Boots",
       "item.stevenuniverseworld.blue_unfuser": "Blue Unfuser",
       "block.stevenuniverseworld.white_diamond_ore": "Minério de Diamante Branco",
+      "item.stevenuniverseworld.yellow_armour_armor_chestplate": "YellowArmour Chestplate",
       "itemGroup.tabitens": "Itens",
       "subtitles.garnet_dies": "",
       "item.stevenuniverseworld.blue_diamond": "Diamante Azul",
       "item.stevenuniverseworld.pink_staff": "Pink Staff",
       "item.stevenuniverseworld.ruby_gem": "Gem de Rubi",
-      "item.stevenuniverseworld.ruby_spawn_egg": "Ovo de Rubi"
+      "item.stevenuniverseworld.ruby_spawn_egg": "Ovo de Rubi",
+      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
+      "item.stevenuniverseworld.yellow_armour_armor_helmet": "YellowArmour Helmet"
     }
   },
   "foldersRoot": {

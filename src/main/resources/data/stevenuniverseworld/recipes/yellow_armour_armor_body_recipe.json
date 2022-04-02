@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "2": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "3": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "4": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "5": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "6": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "7": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "8": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    }
+  },
+  "result": {
+    "item": "stevenuniverseworld:yellow_armour_armor_chestplate",
+    "count": 1
+  }
+}

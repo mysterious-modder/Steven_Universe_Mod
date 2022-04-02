@@ -82,9 +82,8 @@ public class YellowDestabilizerItem extends StevenuniverseworldModElements.ModEl
 			double z = entity.getPosZ();
 			World world = entity.world;
 
-			DestabilizeProcedure.executeProcedure(
-					Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("sourceentity", sourceentity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			DestabilizeProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 	}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "1": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "2": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "3": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "5": {
+      "item": "stevenuniverseworld:yellow_diamond"
+    }
+  },
+  "result": {
+    "item": "stevenuniverseworld:yellow_armour_armor_helmet",
+    "count": 1
+  }
+}
