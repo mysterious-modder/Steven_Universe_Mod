@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "blue_diamond_sickle_item",
+    "customModelName": "blue_diamond_sickle:default",
+    "name": "Blue Diamond Sickle",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 0,
+    "efficiency": 2.0,
+    "attackSpeed": 2.0,
+    "enchantability": 15,
+    "damageVsEntity": 400.0,
+    "usageCount": 2031,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:BlueDiamond"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

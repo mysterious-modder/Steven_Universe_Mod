@@ -2,6 +2,6 @@
   "parent": "stevenuniverseworld:custom/roses_sword_model",
   "textures": {
     "0": "stevenuniverseworld:blocks/roses_sword_texture",
-    "particle": "stevenuniverseworld:items/roses_sword_texture"
+    "particle": "stevenuniverseworld:items/roses_sword_model"
   }
 }

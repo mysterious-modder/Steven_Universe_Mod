@@ -439,20 +439,28 @@
       "registry_name": "yellow_armour_armor_boots_recipe"
     },
     {
-      "name": "YellowSword",
-      "type": "tool",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_sword"
-    },
-    {
       "name": "YellowSwordRecipe",
       "type": "recipe",
       "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "yellow_sword_recipe"
+    },
+    {
+      "name": "BlueDiamondSickle",
+      "type": "tool",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond_sickle"
+    },
+    {
+      "name": "YellowDiamondSword",
+      "type": "tool",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_diamond_sword"
     }
   ],
   "variable_elements": [],
@@ -499,8 +507,8 @@
       "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg",
       "item.stevenuniverseworld.sapphire_spawn_egg": "Sapphire Spawn Egg",
       "block.stevenuniverseworld.yellow_diamond_ore": "Yellow Diamond Ore",
+      "item.stevenuniverseworld.yellow_diamond_sword": "Yellow Diamond Sword",
       "item.stevenuniverseworld.yellow_destabilizer": "Yellow Destabilizer",
-      "item.stevenuniverseworld.yellow_sword": "Yellow Sword",
       "itemGroup.tabgems": "Gems",
       "subtitles.garnet_hurt": "",
       "entity.stevenuniverseworld.ruby": "Ruby",
@@ -521,6 +529,7 @@
       "item.stevenuniverseworld.blue_diamond": "BlueDiamond",
       "item.stevenuniverseworld.pink_staff": "Pink Staff",
       "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
+      "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
       "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
       "item.stevenuniverseworld.yellow_armour_armor_helmet": "YellowArmour Helmet"
@@ -535,8 +544,8 @@
       "item.stevenuniverseworld.garnet_spawn_egg": "Ovo de Garnet",
       "item.stevenuniverseworld.sapphire_spawn_egg": "Ovo de Safira",
       "block.stevenuniverseworld.yellow_diamond_ore": "Minério de Diamante Amarelo",
+      "item.stevenuniverseworld.yellow_diamond_sword": "Yellow Diamond Sword",
       "item.stevenuniverseworld.yellow_destabilizer": "Desestabilizador amarelo",
-      "item.stevenuniverseworld.yellow_sword": "Yellow Sword",
       "subtitles.garnet_hurt": "",
       "itemGroup.tabgems": "Gems",
       "entity.stevenuniverseworld.ruby": "Rubi",
@@ -557,6 +566,7 @@
       "item.stevenuniverseworld.blue_diamond": "Diamante Azul",
       "item.stevenuniverseworld.pink_staff": "Pink Staff",
       "item.stevenuniverseworld.ruby_gem": "Gem de Rubi",
+      "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ovo de Rubi",
       "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
       "item.stevenuniverseworld.yellow_armour_armor_helmet": "YellowArmour Helmet"

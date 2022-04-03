@@ -4,50 +4,50 @@ package net.mcreator.stevenuniverseworld.item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.HoeItem;
 
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
 
 @StevenuniverseworldModElements.ModElement.Tag
-public class YellowSwordItem extends StevenuniverseworldModElements.ModElement {
-	@ObjectHolder("stevenuniverseworld:yellow_sword")
+public class BlueDiamondSickleItem extends StevenuniverseworldModElements.ModElement {
+	@ObjectHolder("stevenuniverseworld:blue_diamond_sickle")
 	public static final Item block = null;
 
-	public YellowSwordItem(StevenuniverseworldModElements instance) {
-		super(instance, 57);
+	public BlueDiamondSickleItem(StevenuniverseworldModElements instance) {
+		super(instance, 63);
 	}
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new SwordItem(new IItemTier() {
+		elements.items.add(() -> new HoeItem(new IItemTier() {
 			public int getMaxUses() {
-				return 6280;
+				return 2031;
 			}
 
 			public float getEfficiency() {
-				return 24f;
+				return 2f;
 			}
 
 			public float getAttackDamage() {
-				return 58f;
+				return 398f;
 			}
 
 			public int getHarvestLevel() {
-				return 20;
+				return 0;
 			}
 
 			public int getEnchantability() {
-				return 140;
+				return 15;
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(YellowDiamondItem.block));
+				return Ingredient.fromStacks(new ItemStack(BlueDiamondItem.block));
 			}
-		}, 3, -3f, new Item.Properties().group(ItemGroup.COMBAT)) {
-		}.setRegistryName("yellow_sword"));
+		}, 0, -2f, new Item.Properties().group(ItemGroup.COMBAT).isImmuneToFire()) {
+		}.setRegistryName("blue_diamond_sickle"));
 	}
 }

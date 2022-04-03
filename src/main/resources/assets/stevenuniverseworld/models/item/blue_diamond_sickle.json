@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/blue_diamond_sickle",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/blue_diamond_sickle_texture",
+    "particle": "stevenuniverseworld:items/blue_diamond_sickle_item"
+  }
+}
