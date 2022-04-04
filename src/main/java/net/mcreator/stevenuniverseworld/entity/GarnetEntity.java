@@ -52,7 +52,6 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
 
 import net.mcreator.stevenuniverseworld.procedures.GarnetUnfuseProcedure;
-import net.mcreator.stevenuniverseworld.item.WhiteDiamondItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.GarnetRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
 
@@ -246,8 +245,6 @@ public class GarnetEntity extends StevenuniverseworldModElements.ModElement {
 		public boolean isBreedingItem(ItemStack stack) {
 			if (stack == null)
 				return false;
-			if (WhiteDiamondItem.block == stack.getItem())
-				return true;
 			return false;
 		}
 	}

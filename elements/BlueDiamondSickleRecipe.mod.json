@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:BlueDiamond"
+      },
+      {
+        "value": "CUSTOM:BlueDiamond"
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:BlueDiamond"
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:IceBlazeRod"
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": ""
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:BlueDiamond"
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": ""
       },
       {
-        "value": "CUSTOM:YellowDiamond"
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "Blocks.RED_FLOWER#7"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:YellowArmourArmor.body"
+      "value": "CUSTOM:BlueDiamondSickle"
     },
-    "name": "yellow_armour_armor_body_recipe",
+    "name": "blue_diamond_sickle_recipe",
     "namespace": "mod"
   }
 }

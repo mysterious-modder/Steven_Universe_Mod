@@ -5,18 +5,12 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 1,
+    "recipeRetstackSize": 2,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:YellowDiamond"
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:PinkDiamond"
       },
       {
         "value": "CUSTOM:YellowDiamond"
@@ -25,7 +19,10 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:BlueDiamond"
+      },
+      {
+        "value": "Items.STICK"
       },
       {
         "value": "CUSTOM:YellowDiamond"
@@ -34,13 +31,16 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:BlueDiamond"
+      },
+      {
+        "value": "CUSTOM:PinkDiamond"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:YellowArmourArmor.legs"
+      "value": "CUSTOM:DenseDiamondRod"
     },
-    "name": "yellow_armour_armor_leggings_recipe",
+    "name": "dense_diamond_rod_recipe",
     "namespace": "mod"
   }
 }

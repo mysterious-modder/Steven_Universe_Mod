@@ -49,7 +49,6 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
 
 import net.mcreator.stevenuniverseworld.procedures.FuseProcedure;
-import net.mcreator.stevenuniverseworld.item.WhiteDiamondItem;
 import net.mcreator.stevenuniverseworld.item.SapphireGemItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.SapphireRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
@@ -235,8 +234,6 @@ public class SapphireEntity extends StevenuniverseworldModElements.ModElement {
 		public boolean isBreedingItem(ItemStack stack) {
 			if (stack == null)
 				return false;
-			if (WhiteDiamondItem.block == stack.getItem())
-				return true;
 			return false;
 		}
 	}

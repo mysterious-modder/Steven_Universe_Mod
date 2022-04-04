@@ -51,7 +51,7 @@ public class GarnetUnfuseProcedure {
 		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) == 0) {
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+						new CommandSource(ICommandSource.DUMMY, new Vector3d((x + 2), y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"summon stevenuniverseworld:ruby");
 			}

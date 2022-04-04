@@ -52,7 +52,6 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
 
-import net.mcreator.stevenuniverseworld.item.WhiteDiamondItem;
 import net.mcreator.stevenuniverseworld.item.RubyGemItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.RubyRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
@@ -92,7 +91,7 @@ public class RubyEntity extends StevenuniverseworldModElements.ModElement {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.4);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 50);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
@@ -121,7 +120,7 @@ public class RubyEntity extends StevenuniverseworldModElements.ModElement {
 		protected void registerGoals() {
 			super.registerGoals();
 			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
-			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 0.7, false));
+			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 0.9, false));
 			this.goalSelector.addGoal(3, new OwnerHurtTargetGoal(this));
 			this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
 			this.goalSelector.addGoal(5, new OwnerHurtByTargetGoal(this));
@@ -228,8 +227,6 @@ public class RubyEntity extends StevenuniverseworldModElements.ModElement {
 		public boolean isBreedingItem(ItemStack stack) {
 			if (stack == null)
 				return false;
-			if (WhiteDiamondItem.block == stack.getItem())
-				return true;
 			return false;
 		}
 	}

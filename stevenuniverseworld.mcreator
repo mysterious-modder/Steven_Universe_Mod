@@ -312,6 +312,10 @@
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -393,60 +397,6 @@
       "registry_name": "diamond_gem"
     },
     {
-      "name": "YellowArmourArmor",
-      "type": "armor",
-      "sortid": 50,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_armour_armor",
-      "metadata": {
-        "eh": true,
-        "el": true,
-        "eb": true,
-        "ec": true
-      }
-    },
-    {
-      "name": "YellowArmourArmorHelmetRecipe",
-      "type": "recipe",
-      "sortid": 51,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_armour_armor_helmet_recipe"
-    },
-    {
-      "name": "YellowArmourArmorBodyRecipe",
-      "type": "recipe",
-      "sortid": 52,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_armour_armor_body_recipe"
-    },
-    {
-      "name": "YellowArmourArmorLeggingsRecipe",
-      "type": "recipe",
-      "sortid": 53,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_armour_armor_leggings_recipe"
-    },
-    {
-      "name": "YellowArmourArmorBootsRecipe",
-      "type": "recipe",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_armour_armor_boots_recipe"
-    },
-    {
-      "name": "YellowSwordRecipe",
-      "type": "recipe",
-      "sortid": 62,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "yellow_sword_recipe"
-    },
-    {
       "name": "BlueDiamondSickle",
       "type": "tool",
       "sortid": 63,
@@ -461,6 +411,98 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "yellow_diamond_sword"
+    },
+    {
+      "name": "WhiteControl",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_control",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WhiteDiamondStaff",
+      "type": "tool",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_diamond_staff"
+    },
+    {
+      "name": "IceBlazeRod",
+      "type": "item",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_blaze_rod"
+    },
+    {
+      "name": "SnowBlaze",
+      "type": "livingentity",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow_blaze"
+    },
+    {
+      "name": "BlueDestabilizerRecipe",
+      "type": "recipe",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_destabilizer_recipe"
+    },
+    {
+      "name": "DenseDiamondRod",
+      "type": "item",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dense_diamond_rod"
+    },
+    {
+      "name": "DenseDiamondRodRecipe",
+      "type": "recipe",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dense_diamond_rod_recipe"
+    },
+    {
+      "name": "BlueDiamondSickleRecipe",
+      "type": "recipe",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond_sickle_recipe"
+    },
+    {
+      "name": "YellowDiamondSwordRecipe",
+      "type": "recipe",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_diamond_sword_recipe"
+    },
+    {
+      "name": "WhiteDiamondStaffRecipe",
+      "type": "recipe",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_diamond_staff_recipe"
     }
   ],
   "variable_elements": [],
@@ -512,18 +554,20 @@
       "itemGroup.tabgems": "Gems",
       "subtitles.garnet_hurt": "",
       "entity.stevenuniverseworld.ruby": "Ruby",
+      "item.stevenuniverseworld.dense_diamond_rod": "Dense Diamond Rod",
       "entity.stevenuniverseworld.sapphire": "Sapphire",
       "item.stevenuniverseworld.white_diamond": "WhiteDiamond",
-      "item.stevenuniverseworld.yellow_armour_armor_leggings": "YellowArmour Leggings",
+      "item.stevenuniverseworld.ice_blaze_rod": "Ice Blaze Rod",
       "block.stevenuniverseworld.pink_diamond_ore": "Pink Diamond Ore",
+      "item.stevenuniverseworld.white_diamond_staff": "White Diamond Staff",
+      "item.stevenuniverseworld.snow_blaze_spawn_egg": "Snow Blaze Spawn Egg",
       "item.stevenuniverseworld.rose_sword": "Rose Sword",
       "entity.stevenuniverseworld.pink_steven": "Pink Steven",
       "entity.stevenuniverseworld.steven_universe": "Steven Universe",
       "item.stevenuniverseworld.yellow_diamond": "YellowDiamond",
-      "item.stevenuniverseworld.yellow_armour_armor_boots": "YellowArmour Boots",
       "item.stevenuniverseworld.blue_unfuser": "Blue Destabilizer",
+      "entity.stevenuniverseworld.snow_blaze": "Snow Blaze",
       "block.stevenuniverseworld.white_diamond_ore": "White Diamond Ore",
-      "item.stevenuniverseworld.yellow_armour_armor_chestplate": "YellowArmour Chestplate",
       "itemGroup.tabitens": "Itens",
       "subtitles.garnet_dies": "",
       "item.stevenuniverseworld.blue_diamond": "BlueDiamond",
@@ -531,8 +575,7 @@
       "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
       "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
-      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
-      "item.stevenuniverseworld.yellow_armour_armor_helmet": "YellowArmour Helmet"
+      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg"
     },
     "pt_br": {
       "item.stevenuniverseworld.steven_universe_spawn_egg": "Steven Universe Spawn Egg",
@@ -549,18 +592,20 @@
       "subtitles.garnet_hurt": "",
       "itemGroup.tabgems": "Gems",
       "entity.stevenuniverseworld.ruby": "Rubi",
+      "item.stevenuniverseworld.dense_diamond_rod": "Dense Diamond Rod",
       "entity.stevenuniverseworld.sapphire": "Safira",
       "item.stevenuniverseworld.white_diamond": "Diamante Branca",
-      "item.stevenuniverseworld.yellow_armour_armor_leggings": "YellowArmour Leggings",
+      "item.stevenuniverseworld.ice_blaze_rod": "Ice Blaze Rod",
       "block.stevenuniverseworld.pink_diamond_ore": "Minério de Diamante Rosa",
+      "item.stevenuniverseworld.white_diamond_staff": "White Diamond Staff",
+      "item.stevenuniverseworld.snow_blaze_spawn_egg": "Snow Blaze Spawn Egg",
       "item.stevenuniverseworld.rose_sword": "Espada de Rose",
       "entity.stevenuniverseworld.pink_steven": "Pink Steven",
       "entity.stevenuniverseworld.steven_universe": "Steven Universe",
       "item.stevenuniverseworld.yellow_diamond": "Diamante Amarela",
-      "item.stevenuniverseworld.yellow_armour_armor_boots": "YellowArmour Boots",
       "item.stevenuniverseworld.blue_unfuser": "Blue Unfuser",
+      "entity.stevenuniverseworld.snow_blaze": "Snow Blaze",
       "block.stevenuniverseworld.white_diamond_ore": "Minério de Diamante Branco",
-      "item.stevenuniverseworld.yellow_armour_armor_chestplate": "YellowArmour Chestplate",
       "itemGroup.tabitens": "Itens",
       "subtitles.garnet_dies": "",
       "item.stevenuniverseworld.blue_diamond": "Diamante Azul",
@@ -568,8 +613,7 @@
       "item.stevenuniverseworld.ruby_gem": "Gem de Rubi",
       "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ovo de Rubi",
-      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
-      "item.stevenuniverseworld.yellow_armour_armor_helmet": "YellowArmour Helmet"
+      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg"
     }
   },
   "foldersRoot": {

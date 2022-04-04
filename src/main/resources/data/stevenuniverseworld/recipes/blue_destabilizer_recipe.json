@@ -1,0 +1,33 @@
+{
+  "group": "homeworldweapons",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "stevenuniverseworld:ice_blaze_rod"
+    },
+    "1": {
+      "item": "stevenuniverseworld:blue_diamond"
+    },
+    "2": {
+      "item": "stevenuniverseworld:ice_blaze_rod"
+    },
+    "3": {
+      "item": "stevenuniverseworld:ice_blaze_rod"
+    },
+    "5": {
+      "item": "stevenuniverseworld:ice_blaze_rod"
+    },
+    "7": {
+      "item": "stevenuniverseworld:ice_blaze_rod"
+    }
+  },
+  "result": {
+    "item": "stevenuniverseworld:blue_unfuser",
+    "count": 1
+  }
+}

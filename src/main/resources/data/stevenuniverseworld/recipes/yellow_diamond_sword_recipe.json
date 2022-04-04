@@ -1,28 +1,29 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "3 5"
+    " 1 ",
+    "345",
+    " 7 "
   ],
   "key": {
-    "0": {
-      "item": "stevenuniverseworld:yellow_diamond"
-    },
     "1": {
-      "item": "stevenuniverseworld:yellow_diamond"
-    },
-    "2": {
       "item": "stevenuniverseworld:yellow_diamond"
     },
     "3": {
       "item": "stevenuniverseworld:yellow_diamond"
     },
+    "4": {
+      "item": "minecraft:golden_sword"
+    },
     "5": {
       "item": "stevenuniverseworld:yellow_diamond"
+    },
+    "7": {
+      "item": "minecraft:blaze_rod"
     }
   },
   "result": {
-    "item": "stevenuniverseworld:yellow_armour_armor_helmet",
+    "item": "stevenuniverseworld:yellow_diamond_sword",
     "count": 1
   }
 }

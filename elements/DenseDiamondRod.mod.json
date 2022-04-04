@@ -2,30 +2,30 @@
   "_fv": 24,
   "_type": "item",
   "definition": {
-    "renderType": 1,
-    "texture": "pink_staff",
-    "customModelName": "pink_staff:default",
-    "name": "Pink Staff",
+    "renderType": 0,
+    "texture": "dense_diamond_rod",
+    "customModelName": "Normal",
+    "name": "Dense Diamond Rod",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "CUSTOM:Itens"
+      "value": "MISC"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 2000,
+    "damageCount": 0,
     "recipeRemainder": {
-      "value": ""
+      "value": "Items.STICK"
     },
     "destroyAnyBlock": false,
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": true,
-    "damageVsEntity": 5.0,
+    "damageVsEntity": 4.0,
     "specialInfo": [],
-    "hasGlow": false,
+    "hasGlow": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,

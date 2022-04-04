@@ -10,22 +10,7 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:YellowDiamond"
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:WhiteDiamond"
       },
       {
         "value": ""
@@ -35,12 +20,27 @@
       },
       {
         "value": ""
+      },
+      {
+        "value": "CUSTOM:DenseDiamondRod"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DenseDiamondRod"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:YellowArmourArmor.helmet"
+      "value": "CUSTOM:WhiteDiamondStaff"
     },
-    "name": "yellow_armour_armor_helmet_recipe",
+    "name": "white_diamond_staff_recipe",
     "namespace": "mod"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    " 4 ",
+    "  8"
+  ],
+  "key": {
+    "0": {
+      "item": "stevenuniverseworld:white_diamond"
+    },
+    "4": {
+      "item": "stevenuniverseworld:dense_diamond_rod"
+    },
+    "8": {
+      "item": "stevenuniverseworld:dense_diamond_rod"
+    }
+  },
+  "result": {
+    "item": "stevenuniverseworld:white_diamond_staff",
+    "count": 1
+  }
+}

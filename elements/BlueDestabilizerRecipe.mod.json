@@ -6,41 +6,41 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "",
+    "group": "homeworldweapons",
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "CUSTOM:IceBlazeRod"
       },
       {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:BlueDiamond"
       },
       {
-        "value": ""
+        "value": "CUSTOM:IceBlazeRod"
       },
       {
-        "value": ""
-      },
-      {
-        "value": "CUSTOM:YellowDiamond"
+        "value": "CUSTOM:IceBlazeRod"
       },
       {
         "value": ""
       },
       {
+        "value": "CUSTOM:IceBlazeRod"
+      },
+      {
         "value": ""
       },
       {
-        "value": "Items.STICK"
+        "value": "CUSTOM:IceBlazeRod"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:YellowSword"
+      "value": "CUSTOM:BlueUnfuser"
     },
-    "name": "yellow_sword_recipe",
+    "name": "blue_destabilizer_recipe",
     "namespace": "mod"
   }
 }

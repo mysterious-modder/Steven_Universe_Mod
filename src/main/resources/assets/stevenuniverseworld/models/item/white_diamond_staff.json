@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/white_diamond_staff",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/white_diamond_staff_texture",
+    "particle": "stevenuniverseworld:items/white_diamond_staff_item"
+  }
+}

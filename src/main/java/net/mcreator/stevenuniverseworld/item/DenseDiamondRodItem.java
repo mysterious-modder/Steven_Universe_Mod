@@ -2,9 +2,12 @@
 package net.mcreator.stevenuniverseworld.item;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -12,19 +15,18 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.stevenuniverseworld.itemgroup.ItensItemGroup;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
 @StevenuniverseworldModElements.ModElement.Tag
-public class PinkStaffItem extends StevenuniverseworldModElements.ModElement {
-	@ObjectHolder("stevenuniverseworld:pink_staff")
+public class DenseDiamondRodItem extends StevenuniverseworldModElements.ModElement {
+	@ObjectHolder("stevenuniverseworld:dense_diamond_rod")
 	public static final Item block = null;
 
-	public PinkStaffItem(StevenuniverseworldModElements instance) {
-		super(instance, 42);
+	public DenseDiamondRodItem(StevenuniverseworldModElements instance) {
+		super(instance, 68);
 	}
 
 	@Override
@@ -34,8 +36,8 @@ public class PinkStaffItem extends StevenuniverseworldModElements.ModElement {
 
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItensItemGroup.tab).maxDamage(2000).isImmuneToFire().rarity(Rarity.EPIC));
-			setRegistryName("pink_staff");
+			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).isImmuneToFire().rarity(Rarity.EPIC));
+			setRegistryName("dense_diamond_rod");
 		}
 
 		@Override
@@ -59,11 +61,17 @@ public class PinkStaffItem extends StevenuniverseworldModElements.ModElement {
 				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 				builder.putAll(super.getAttributeModifiers(slot));
 				builder.put(Attributes.ATTACK_DAMAGE,
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Item modifier", (double) 3, AttributeModifier.Operation.ADDITION));
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Item modifier", (double) 2, AttributeModifier.Operation.ADDITION));
 				builder.put(Attributes.ATTACK_SPEED,
 						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Item modifier", -2.4, AttributeModifier.Operation.ADDITION));
 			}
 			return super.getAttributeModifiers(slot);
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public boolean hasEffect(ItemStack itemstack) {
+			return true;
 		}
 	}
 }

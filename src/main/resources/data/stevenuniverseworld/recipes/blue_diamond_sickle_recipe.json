@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01 ",
+    "34 ",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "stevenuniverseworld:blue_diamond"
+    },
+    "1": {
+      "item": "stevenuniverseworld:blue_diamond"
+    },
+    "3": {
+      "item": "stevenuniverseworld:blue_diamond"
+    },
+    "4": {
+      "item": "stevenuniverseworld:ice_blaze_rod"
+    },
+    "6": {
+      "item": "stevenuniverseworld:blue_diamond"
+    },
+    "8": {
+      "item": "minecraft:pink_tulip"
+    }
+  },
+  "result": {
+    "item": "stevenuniverseworld:blue_diamond_sickle",
+    "count": 1
+  }
+}

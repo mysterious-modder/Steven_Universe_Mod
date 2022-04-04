@@ -7,6 +7,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
@@ -51,37 +52,39 @@ public class FuseProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((Entity) world
-				.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
-						new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
-				.stream().sorted(new Object() {
-					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) {
-			if (!entity.world.isRemote())
-				entity.remove();
-			if (!((Entity) world
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) > 0) {
+			if (((Entity) world
 					.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
-							new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
+							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
 					.stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 						}
-					}.compareDistOf(x, y, z)).findFirst().orElse(null)).world.isRemote())
-				((Entity) world
+					}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) {
+				if (!entity.world.isRemote())
+					entity.remove();
+				if (!((Entity) world
 						.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
-								new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
+								new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null)).remove();
-			if (world instanceof ServerWorld) {
-				((World) world).getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"summon stevenuniverseworld:garnet");
+						}.compareDistOf(x, y, z)).findFirst().orElse(null)).world.isRemote())
+					((Entity) world
+							.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
+									new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
+							.stream().sorted(new Object() {
+								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+								}
+							}.compareDistOf(x, y, z)).findFirst().orElse(null)).remove();
+				if (world instanceof ServerWorld) {
+					((World) world).getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+							"summon stevenuniverseworld:garnet");
+				}
 			}
 		}
 	}
