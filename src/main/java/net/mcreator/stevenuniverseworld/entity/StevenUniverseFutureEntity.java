@@ -41,6 +41,7 @@ import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.stevenuniverseworld.procedures.StevenStressProcedure;
+import net.mcreator.stevenuniverseworld.procedures.StevenHealProcedure;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.StevenUniverseFutureRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
@@ -163,6 +164,18 @@ public class StevenUniverseFutureEntity extends StevenuniverseworldModElements.M
 			if (source.getDamageType().equals("witherSkull"))
 				return false;
 			return super.attackEntityFrom(source, amount);
+		}
+
+		@Override
+		public void baseTick() {
+			super.baseTick();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+
+			StevenHealProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

@@ -14,28 +14,28 @@ public static class Modelsnow_blaze extends EntityModel<Entity> {
 
 		Head = new ModelRenderer(this);
 		Head.setRotationPoint(0.5F, 5.0F, 0.0F);
-		Head.setTextureOffset(0, 0).addBox(-4.5F, -9.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
+		Head.setTextureOffset(0, 0).addBox(-5.0F, -9.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
 
 		Upper = new ModelRenderer(this);
 		Upper.setRotationPoint(0.5F, 5.0F, 0.0F);
-		Upper.setTextureOffset(32, 30).addBox(-9.5F, -4.0F, 0.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Upper.setTextureOffset(32, 20).addBox(7.5F, -4.0F, 0.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Upper.setTextureOffset(32, 10).addBox(-1.5F, -4.0F, 8.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Upper.setTextureOffset(32, 0).addBox(-1.5F, -4.0F, -9.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setTextureOffset(32, 30).addBox(-10.0F, -4.0F, 0.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setTextureOffset(32, 20).addBox(7.0F, -4.0F, 0.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setTextureOffset(32, 10).addBox(-2.0F, -4.0F, 8.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setTextureOffset(32, 0).addBox(-2.0F, -4.0F, -9.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
 
 		Medium = new ModelRenderer(this);
 		Medium.setRotationPoint(0.0F, 11.0F, 0.0F);
-		Medium.setTextureOffset(24, 26).addBox(-5.0F, -4.0F, -5.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Medium.setTextureOffset(16, 26).addBox(4.0F, -4.0F, -5.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Medium.setTextureOffset(8, 26).addBox(4.0F, -4.0F, 3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Medium.setTextureOffset(0, 26).addBox(-5.0F, -4.0F, 3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Medium.setTextureOffset(24, 26).addBox(-5.5F, -4.0F, -5.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Medium.setTextureOffset(16, 26).addBox(3.5F, -4.0F, -5.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Medium.setTextureOffset(8, 26).addBox(3.5F, -4.0F, 3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Medium.setTextureOffset(0, 26).addBox(-5.5F, -4.0F, 3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
 
 		Lower = new ModelRenderer(this);
 		Lower.setRotationPoint(0.0F, 18.0F, 0.0F);
-		Lower.setTextureOffset(24, 16).addBox(-3.0F, -4.0F, 1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Lower.setTextureOffset(16, 16).addBox(2.0F, -4.0F, 1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Lower.setTextureOffset(8, 16).addBox(-3.0F, -4.0F, -3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Lower.setTextureOffset(0, 16).addBox(2.0F, -4.0F, -3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Lower.setTextureOffset(24, 16).addBox(-3.5F, -4.0F, 1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Lower.setTextureOffset(16, 16).addBox(1.5F, -4.0F, 1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Lower.setTextureOffset(8, 16).addBox(-3.5F, -4.0F, -3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Lower.setTextureOffset(0, 16).addBox(1.5F, -4.0F, -3.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
 	}
 
 	@Override

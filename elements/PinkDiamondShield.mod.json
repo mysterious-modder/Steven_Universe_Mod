@@ -1,0 +1,33 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "pink_shield_item",
+    "customModelName": "pink_shield:default",
+    "name": "Pink Diamond Shield",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Itens"
+    },
+    "toolType": "Special",
+    "harvestLevel": 0,
+    "efficiency": 0.0,
+    "attackSpeed": 0.0,
+    "enchantability": 0,
+    "damageVsEntity": 0.0,
+    "usageCount": 2031,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "PinkShieldActivate"
+    },
+    "onRightClickedOnBlock": {
+      "name": "PinkShieldActivate"
+    }
+  }
+}

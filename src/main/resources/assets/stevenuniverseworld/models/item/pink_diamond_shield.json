@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/pink_shield",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/pink_shield_texture",
+    "particle": "stevenuniverseworld:items/pink_shield_item"
+  }
+}

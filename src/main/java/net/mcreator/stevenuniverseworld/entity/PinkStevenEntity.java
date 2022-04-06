@@ -17,6 +17,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.PotionEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -34,6 +35,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.stevenuniverseworld.procedures.StevenFuseProcedure;
 import net.mcreator.stevenuniverseworld.procedures.PinkExplosionProcedure;
+import net.mcreator.stevenuniverseworld.item.PinkDiamondShieldItem;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.PinkStevenRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
@@ -90,6 +92,7 @@ public class PinkStevenEntity extends StevenuniverseworldModElements.ModElement 
 			experienceValue = 200;
 			setNoAI(false);
 			enablePersistence();
+			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(PinkDiamondShieldItem.block));
 		}
 
 		@Override

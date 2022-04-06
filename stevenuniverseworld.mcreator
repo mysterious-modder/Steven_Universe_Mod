@@ -623,9 +623,120 @@
           }
         ]
       }
+    },
+    {
+      "name": "PinkShieldActivate",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_shield_activate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PinkDiamondShield",
+      "type": "tool",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_diamond_shield"
+    },
+    {
+      "name": "PinkShieldWorking",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_shield_working",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PinkDiamondShieldActivated",
+      "type": "tool",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_diamond_shield_activated"
+    },
+    {
+      "name": "PinkShieldBlockDamage",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_shield_block_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShieldRealisttics",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_realisttics",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StevenHeal",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steven_heal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "pinkShieldTimer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    }
+  ],
   "sound_elements": [
     {
       "name": "garnet_living",
@@ -677,6 +788,7 @@
       "entity.stevenuniverseworld.ruby": "Ruby",
       "item.stevenuniverseworld.dense_diamond_rod": "Dense Diamond Rod",
       "entity.stevenuniverseworld.sapphire": "Sapphire",
+      "item.stevenuniverseworld.pink_diamond_shield": "Pink Diamond Shield",
       "item.stevenuniverseworld.white_diamond": "WhiteDiamond",
       "item.stevenuniverseworld.ice_blaze_rod": "Ice Blaze Rod",
       "block.stevenuniverseworld.pink_diamond_ore": "Pink Diamond Ore",
@@ -698,6 +810,7 @@
       "item.stevenuniverseworld.pink_staff": "Pink Staff",
       "item.stevenuniverseworld.ruby_gem": "Ruby Gem",
       "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
+      "item.stevenuniverseworld.pink_diamond_shield_activated": "Pink Diamond Shield Activated",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
       "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg"
     },
@@ -719,6 +832,7 @@
       "entity.stevenuniverseworld.ruby": "Rubi",
       "item.stevenuniverseworld.dense_diamond_rod": "Dense Diamond Rod",
       "entity.stevenuniverseworld.sapphire": "Safira",
+      "item.stevenuniverseworld.pink_diamond_shield": "Pink Diamond Shield",
       "item.stevenuniverseworld.white_diamond": "Diamante Branca",
       "item.stevenuniverseworld.ice_blaze_rod": "Ice Blaze Rod",
       "block.stevenuniverseworld.pink_diamond_ore": "Minério de Diamante Rosa",
@@ -740,6 +854,7 @@
       "item.stevenuniverseworld.pink_staff": "Pink Staff",
       "item.stevenuniverseworld.ruby_gem": "Gem de Rubi",
       "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
+      "item.stevenuniverseworld.pink_diamond_shield_activated": "Pink Diamond Shield Activated",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ovo de Rubi",
       "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg"
     }
