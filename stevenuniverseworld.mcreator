@@ -503,6 +503,126 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "white_diamond_staff_recipe"
+    },
+    {
+      "name": "PinkExplosion",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_explosion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StevenUniverseFuture",
+      "type": "livingentity",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steven_universe_future"
+    },
+    {
+      "name": "PinkStevenFuture",
+      "type": "livingentity",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_steven_future"
+    },
+    {
+      "name": "StevenStress",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steven_stress",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StevenCalmDown",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steven_calm_down",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StevenFuse",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steven_fuse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -546,6 +666,7 @@
       "entity.stevenuniverseworld.garnet": "Garnet",
       "subtitles.garnet_living": "",
       "item.stevenuniverseworld.sapphire_gem": "Sapphire Gem",
+      "item.stevenuniverseworld.steven_universe_future_spawn_egg": "Steven Universe Future Spawn Egg",
       "item.stevenuniverseworld.garnet_spawn_egg": "Garnet Spawn Egg",
       "item.stevenuniverseworld.sapphire_spawn_egg": "Sapphire Spawn Egg",
       "block.stevenuniverseworld.yellow_diamond_ore": "Yellow Diamond Ore",
@@ -562,13 +683,16 @@
       "item.stevenuniverseworld.white_diamond_staff": "White Diamond Staff",
       "item.stevenuniverseworld.snow_blaze_spawn_egg": "Snow Blaze Spawn Egg",
       "item.stevenuniverseworld.rose_sword": "Rose Sword",
+      "item.stevenuniverseworld.pink_steven_future_spawn_egg": "Steven Universe Pink Spawn Egg",
       "entity.stevenuniverseworld.pink_steven": "Pink Steven",
+      "entity.stevenuniverseworld.steven_universe_future": "Steven Universe Future",
       "entity.stevenuniverseworld.steven_universe": "Steven Universe",
       "item.stevenuniverseworld.yellow_diamond": "YellowDiamond",
       "item.stevenuniverseworld.blue_unfuser": "Blue Destabilizer",
       "entity.stevenuniverseworld.snow_blaze": "Snow Blaze",
       "block.stevenuniverseworld.white_diamond_ore": "White Diamond Ore",
       "itemGroup.tabitens": "Itens",
+      "entity.stevenuniverseworld.pink_steven_future": "Steven Universe Pink",
       "subtitles.garnet_dies": "",
       "item.stevenuniverseworld.blue_diamond": "BlueDiamond",
       "item.stevenuniverseworld.pink_staff": "Pink Staff",
@@ -584,6 +708,7 @@
       "entity.stevenuniverseworld.garnet": "Garnet",
       "subtitles.garnet_living": "",
       "item.stevenuniverseworld.sapphire_gem": "Gem de Safira",
+      "item.stevenuniverseworld.steven_universe_future_spawn_egg": "Steven Universe Future Spawn Egg",
       "item.stevenuniverseworld.garnet_spawn_egg": "Ovo de Garnet",
       "item.stevenuniverseworld.sapphire_spawn_egg": "Ovo de Safira",
       "block.stevenuniverseworld.yellow_diamond_ore": "Minério de Diamante Amarelo",
@@ -600,13 +725,16 @@
       "item.stevenuniverseworld.white_diamond_staff": "White Diamond Staff",
       "item.stevenuniverseworld.snow_blaze_spawn_egg": "Snow Blaze Spawn Egg",
       "item.stevenuniverseworld.rose_sword": "Espada de Rose",
+      "item.stevenuniverseworld.pink_steven_future_spawn_egg": "Steven Universe Pink Spawn Egg",
       "entity.stevenuniverseworld.pink_steven": "Pink Steven",
+      "entity.stevenuniverseworld.steven_universe_future": "Steven Universe Future",
       "entity.stevenuniverseworld.steven_universe": "Steven Universe",
       "item.stevenuniverseworld.yellow_diamond": "Diamante Amarela",
       "item.stevenuniverseworld.blue_unfuser": "Blue Unfuser",
       "entity.stevenuniverseworld.snow_blaze": "Snow Blaze",
       "block.stevenuniverseworld.white_diamond_ore": "Minério de Diamante Branco",
       "itemGroup.tabitens": "Itens",
+      "entity.stevenuniverseworld.pink_steven_future": "Steven Universe Pink",
       "subtitles.garnet_dies": "",
       "item.stevenuniverseworld.blue_diamond": "Diamante Azul",
       "item.stevenuniverseworld.pink_staff": "Pink Staff",

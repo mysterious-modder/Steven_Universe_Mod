@@ -32,14 +32,6 @@ public class SummonPinkGemProcedure {
 							"summon stevenuniverseworld:pink_steven");
 				}
 			}
-		} else if (Summon == 1) {
-			{
-				Entity _ent = entity;
-				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"summon stevenuniverseworld:steven_universe");
-				}
-			}
 		}
 		(itemstack).shrink((int) 1);
 	}

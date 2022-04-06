@@ -8,8 +8,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.common.DungeonHooks;
 
+import net.minecraft.world.server.ServerBossInfo;
 import net.minecraft.world.World;
+import net.minecraft.world.BossInfo;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
@@ -17,9 +20,12 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
@@ -32,10 +38,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
-import net.mcreator.stevenuniverseworld.procedures.StevenFuseProcedure;
-import net.mcreator.stevenuniverseworld.procedures.PinkExplosionProcedure;
+import net.mcreator.stevenuniverseworld.procedures.StevenCalmDownProcedure;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondItem;
-import net.mcreator.stevenuniverseworld.entity.renderer.PinkStevenRenderer;
+import net.mcreator.stevenuniverseworld.entity.renderer.PinkStevenFutureRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
 
 import java.util.stream.Stream;
@@ -44,26 +49,27 @@ import java.util.HashMap;
 import java.util.AbstractMap;
 
 @StevenuniverseworldModElements.ModElement.Tag
-public class PinkStevenEntity extends StevenuniverseworldModElements.ModElement {
+public class PinkStevenFutureEntity extends StevenuniverseworldModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
-			.size(0.6f, 1.8f)).build("pink_steven").setRegistryName("pink_steven");
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
+			.size(0.6f, 1.8f)).build("pink_steven_future").setRegistryName("pink_steven_future");
 
-	public PinkStevenEntity(StevenuniverseworldModElements instance) {
-		super(instance, 47);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new PinkStevenRenderer.ModelRegisterHandler());
+	public PinkStevenFutureEntity(StevenuniverseworldModElements instance) {
+		super(instance, 75);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new PinkStevenFutureRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}
 
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -65310, -11009961, new Item.Properties().group(ItemGroup.MISC))
-				.setRegistryName("pink_steven_spawn_egg"));
+		elements.items.add(() -> new SpawnEggItem(entity, -26113, -10092442, new Item.Properties().group(ItemGroup.MISC))
+				.setRegistryName("pink_steven_future_spawn_egg"));
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
+		DungeonHooks.addDungeonMob(entity, 180);
 	}
 
 	private static class EntityAttributesRegisterHandler {
@@ -71,11 +77,11 @@ public class PinkStevenEntity extends StevenuniverseworldModElements.ModElement 
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.4);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 250);
-			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 3);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 7);
-			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 10);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 2);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 400);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 10);
+			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 5);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -100,11 +106,13 @@ public class PinkStevenEntity extends StevenuniverseworldModElements.ModElement 
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false));
-			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 1));
-			this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(5, new SwimGoal(this));
+			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, MonsterEntity.class, false, false));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 0.7, false));
+			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 0.5));
+			this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
+			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(7, new SwimGoal(this));
 		}
 
 		@Override
@@ -134,24 +142,7 @@ public class PinkStevenEntity extends StevenuniverseworldModElements.ModElement 
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			Entity sourceentity = source.getTrueSource();
-
-			PinkExplosionProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			if (source.getImmediateSource() instanceof PotionEntity)
-				return false;
 			if (source == DamageSource.FALL)
-				return false;
-			if (source == DamageSource.DROWN)
-				return false;
-			if (source == DamageSource.LIGHTNING_BOLT)
-				return false;
-			if (source == DamageSource.DRAGON_BREATH)
 				return false;
 			if (source == DamageSource.WITHER)
 				return false;
@@ -168,10 +159,35 @@ public class PinkStevenEntity extends StevenuniverseworldModElements.ModElement 
 			double z = this.getPosZ();
 			Entity entity = this;
 
-			StevenFuseProcedure.executeProcedure(Stream
+			StevenCalmDownProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+
+		@Override
+		public boolean isNonBoss() {
+			return false;
+		}
+
+		private final ServerBossInfo bossInfo = new ServerBossInfo(this.getDisplayName(), BossInfo.Color.PINK, BossInfo.Overlay.PROGRESS);
+
+		@Override
+		public void addTrackingPlayer(ServerPlayerEntity player) {
+			super.addTrackingPlayer(player);
+			this.bossInfo.addPlayer(player);
+		}
+
+		@Override
+		public void removeTrackingPlayer(ServerPlayerEntity player) {
+			super.removeTrackingPlayer(player);
+			this.bossInfo.removePlayer(player);
+		}
+
+		@Override
+		public void updateAITasks() {
+			super.updateAITasks();
+			this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
 		}
 	}
 }
