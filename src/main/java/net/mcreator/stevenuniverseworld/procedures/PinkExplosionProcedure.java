@@ -27,9 +27,9 @@ public class PinkExplosionProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		double Random = 0;
 		Random = (Math.random() * 100);
-		if (Random > 50) {
+		if (Random > 75) {
 			if (world instanceof World && !((World) world).isRemote) {
-				((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 2,
+				((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 1,
 						Explosion.Mode.DESTROY);
 			}
 		}
