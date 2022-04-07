@@ -7,10 +7,12 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
+import net.mcreator.stevenuniverseworld.entity.StevenUniverseFutureEntity;
 import net.mcreator.stevenuniverseworld.entity.GarnetEntity;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldMod;
 
@@ -51,6 +53,8 @@ public class StevenCalmDownProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
+		double Vida = 0;
+		Vida = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1);
 		if ((((Entity) world
 				.getEntitiesWithinAABB(GarnetEntity.CustomEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
@@ -68,6 +72,27 @@ public class StevenCalmDownProcedure {
 										.withFeedbackDisabled(),
 						"summon stevenuniverseworld:steven_universe_future");
 			}
+			if (((Entity) world
+					.getEntitiesWithinAABB(StevenUniverseFutureEntity.CustomEntity.class,
+							new AxisAlignedBB((entity.getPosX()) - (2 / 2d), (entity.getPosY()) - (2 / 2d), (entity.getPosZ()) - (2 / 2d),
+									(entity.getPosX()) + (2 / 2d), (entity.getPosY()) + (2 / 2d), (entity.getPosZ()) + (2 / 2d)),
+							null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) instanceof LivingEntity)
+				((LivingEntity) ((Entity) world
+						.getEntitiesWithinAABB(StevenUniverseFutureEntity.CustomEntity.class,
+								new AxisAlignedBB((entity.getPosX()) - (2 / 2d), (entity.getPosY()) - (2 / 2d), (entity.getPosZ()) - (2 / 2d),
+										(entity.getPosX()) + (2 / 2d), (entity.getPosY()) + (2 / 2d), (entity.getPosZ()) + (2 / 2d)),
+								null)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+							}
+						}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)))
+								.setHealth((float) Vida);
 		}
 	}
 }

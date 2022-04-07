@@ -48,6 +48,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
 
+import net.mcreator.stevenuniverseworld.procedures.SapphireLukyProcedure;
 import net.mcreator.stevenuniverseworld.procedures.FuseProcedure;
 import net.mcreator.stevenuniverseworld.item.SapphireGemItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.SapphireRenderer;
@@ -220,6 +221,18 @@ public class SapphireEntity extends StevenuniverseworldModElements.ModElement {
 				}
 			}
 			return retval;
+		}
+
+		@Override
+		public void baseTick() {
+			super.baseTick();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+
+			SapphireLukyProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override

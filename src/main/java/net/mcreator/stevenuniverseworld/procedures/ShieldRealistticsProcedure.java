@@ -50,7 +50,7 @@ public class ShieldRealistticsProcedure {
 		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
 				.getItem() == PinkDiamondShieldActivatedItem.block) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 3, (int) 4, (false), (false)));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 2, (int) 4, (false), (false)));
 		}
 	}
 }

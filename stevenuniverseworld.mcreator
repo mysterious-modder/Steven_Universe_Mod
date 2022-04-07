@@ -727,6 +727,86 @@
           }
         ]
       }
+    },
+    {
+      "name": "SapphireLuky",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sapphire_luky",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PinkPowers",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_powers",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PinkShard",
+      "type": "item",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_shard"
+    },
+    {
+      "name": "PinkStevenDrops",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_steven_drops",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PinkDiamondRecipe",
+      "type": "recipe",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_diamond_recipe"
+    },
+    {
+      "name": "BreakItem",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "break_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -812,7 +892,8 @@
       "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
       "item.stevenuniverseworld.pink_diamond_shield_activated": "Pink Diamond Shield Activated",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
-      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg"
+      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
+      "item.stevenuniverseworld.pink_shard": "Pink Shard"
     },
     "pt_br": {
       "item.stevenuniverseworld.steven_universe_spawn_egg": "Steven Universe Spawn Egg",
@@ -856,7 +937,8 @@
       "item.stevenuniverseworld.blue_diamond_sickle": "Blue Diamond Sickle",
       "item.stevenuniverseworld.pink_diamond_shield_activated": "Pink Diamond Shield Activated",
       "item.stevenuniverseworld.ruby_spawn_egg": "Ovo de Rubi",
-      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg"
+      "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
+      "item.stevenuniverseworld.pink_shard": "Pink Shard"
     }
   },
   "foldersRoot": {

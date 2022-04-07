@@ -52,7 +52,7 @@ public class FuseProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) > 0) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) > 0 && entity.isAlive() == true) {
 			if (((Entity) world
 					.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
 							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)

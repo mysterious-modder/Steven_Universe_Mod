@@ -34,6 +34,7 @@ import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.stevenuniverseworld.procedures.StevenFuseProcedure;
+import net.mcreator.stevenuniverseworld.procedures.PinkStevenDropsProcedure;
 import net.mcreator.stevenuniverseworld.procedures.PinkExplosionProcedure;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondShieldItem;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondItem;
@@ -161,6 +162,19 @@ public class PinkStevenEntity extends StevenuniverseworldModElements.ModElement 
 			if (source.getDamageType().equals("witherSkull"))
 				return false;
 			return super.attackEntityFrom(source, amount);
+		}
+
+		@Override
+		public void onDeath(DamageSource source) {
+			super.onDeath(source);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity sourceentity = source.getTrueSource();
+			Entity entity = this;
+
+			PinkStevenDropsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override

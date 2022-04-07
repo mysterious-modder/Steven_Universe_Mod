@@ -39,7 +39,7 @@ public class PinkShieldActivateProcedure {
 			}
 			(itemstack).setDamage((int) ShieldDamage);
 			{
-				double _setval = 60;
+				double _setval = 40;
 				entity.getCapability(StevenuniverseworldModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.pinkShieldTimer = _setval;
 					capability.syncPlayerVariables(entity);

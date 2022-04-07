@@ -40,7 +40,7 @@ import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.stevenuniverseworld.item.RoseSwordItem;
-import net.mcreator.stevenuniverseworld.item.PinkDiamondItem;
+import net.mcreator.stevenuniverseworld.item.PinkShardItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.StevenUniverseRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
 
@@ -130,7 +130,7 @@ public class StevenUniverseEntity extends StevenuniverseworldModElements.ModElem
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
 			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(PinkDiamondItem.block));
+			this.entityDropItem(new ItemStack(PinkShardItem.block));
 		}
 
 		@Override

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "1": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "2": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "3": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "4": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "5": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "6": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "7": {
+      "item": "stevenuniverseworld:pink_shard"
+    },
+    "8": {
+      "item": "stevenuniverseworld:pink_shard"
+    }
+  },
+  "result": {
+    "item": "stevenuniverseworld:pink_diamond",
+    "count": 1
+  }
+}
