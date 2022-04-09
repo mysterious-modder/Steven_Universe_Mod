@@ -21,6 +21,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.ReturnToVillageGoal;
@@ -42,6 +43,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.stevenuniverseworld.procedures.StevenStressProcedure;
 import net.mcreator.stevenuniverseworld.procedures.StevenHealProcedure;
+import net.mcreator.stevenuniverseworld.item.StevenShieldItem;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.StevenUniverseFutureRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
@@ -105,6 +107,7 @@ public class StevenUniverseFutureEntity extends StevenuniverseworldModElements.M
 			super(type, world);
 			experienceValue = 50;
 			setNoAI(false);
+			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(StevenShieldItem.block));
 		}
 
 		@Override
@@ -154,9 +157,10 @@ public class StevenUniverseFutureEntity extends StevenuniverseworldModElements.M
 			Entity entity = this;
 			Entity sourceentity = source.getTrueSource();
 
-			StevenStressProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			StevenStressProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (source == DamageSource.FALL)
 				return false;
 			if (source == DamageSource.WITHER)

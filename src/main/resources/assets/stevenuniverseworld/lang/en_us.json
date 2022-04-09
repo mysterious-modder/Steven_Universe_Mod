@@ -24,8 +24,11 @@
   "item.stevenuniverseworld.snow_blaze_spawn_egg": "Snow Blaze Spawn Egg",
   "item.stevenuniverseworld.rose_sword": "Rose Sword",
   "item.stevenuniverseworld.pink_steven_future_spawn_egg": "Steven Universe Pink Spawn Egg",
+  "item.stevenuniverseworld.roses_shield": "Roses Shield",
+  "item.stevenuniverseworld.roses_shield_activated": "Roses Shield Activated",
   "entity.stevenuniverseworld.pink_steven": "Pink Steven",
   "entity.stevenuniverseworld.steven_universe_future": "Steven Universe Future",
+  "item.stevenuniverseworld.steven_shield_activated": "Steven Shield Activated",
   "entity.stevenuniverseworld.steven_universe": "Steven Universe",
   "item.stevenuniverseworld.yellow_diamond": "YellowDiamond",
   "item.stevenuniverseworld.blue_unfuser": "Blue Destabilizer",
@@ -41,5 +44,6 @@
   "item.stevenuniverseworld.pink_diamond_shield_activated": "Pink Diamond Shield Activated",
   "item.stevenuniverseworld.ruby_spawn_egg": "Ruby Spawn Egg",
   "item.stevenuniverseworld.pink_steven_spawn_egg": "Pink Steven Spawn Egg",
-  "item.stevenuniverseworld.pink_shard": "Pink Shard"
+  "item.stevenuniverseworld.pink_shard": "Pink Shard",
+  "item.stevenuniverseworld.steven_shield": "Steven Shield"
 }

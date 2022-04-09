@@ -17,11 +17,11 @@ public static class Modelsnow_blaze extends EntityModel<Entity> {
 		Head.setTextureOffset(0, 0).addBox(-5.0F, -9.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.0F, false);
 
 		Upper = new ModelRenderer(this);
-		Upper.setRotationPoint(0.5F, 5.0F, 0.0F);
-		Upper.setTextureOffset(32, 30).addBox(-10.0F, -4.0F, 0.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Upper.setTextureOffset(32, 20).addBox(7.0F, -4.0F, 0.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Upper.setTextureOffset(32, 10).addBox(-2.0F, -4.0F, 8.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
-		Upper.setTextureOffset(32, 0).addBox(-2.0F, -4.0F, -9.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setRotationPoint(-0.25F, 5.0F, 0.75F);
+		Upper.setTextureOffset(32, 30).addBox(-9.25F, -4.0F, -0.75F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setTextureOffset(32, 20).addBox(7.75F, -4.0F, -0.75F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setTextureOffset(32, 10).addBox(-1.25F, -4.0F, 7.25F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		Upper.setTextureOffset(32, 0).addBox(-1.25F, -4.0F, -9.75F, 2.0F, 8.0F, 2.0F, 0.0F, false);
 
 		Medium = new ModelRenderer(this);
 		Medium.setRotationPoint(0.0F, 11.0F, 0.0F);

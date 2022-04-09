@@ -11,6 +11,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.stevenuniverseworld.item.StevenShieldActivatedItem;
+import net.mcreator.stevenuniverseworld.item.RosesShieldActivatedItem;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondShieldActivatedItem;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldMod;
 
@@ -55,8 +57,12 @@ public class PinkShieldBlockDamageProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof PlayerEntity == true
-				&& ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-						.getItem() == PinkDiamondShieldActivatedItem.block) {
+				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+						.getItem() == PinkDiamondShieldActivatedItem.block
+						|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+								.getItem() == RosesShieldActivatedItem.block
+						|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+								.getItem() == StevenShieldActivatedItem.block)) {
 			if (dependencies.get("event") != null) {
 				Object _obj = dependencies.get("event");
 				if (_obj instanceof Event) {

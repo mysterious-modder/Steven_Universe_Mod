@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "rosesshieldtexture"
+        "0": "steven_shield_v2_texture"
       },
       "name": "default"
     }

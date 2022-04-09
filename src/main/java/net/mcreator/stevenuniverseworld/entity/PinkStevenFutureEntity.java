@@ -20,6 +20,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
@@ -39,6 +40,7 @@ import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.stevenuniverseworld.procedures.StevenCalmDownProcedure;
+import net.mcreator.stevenuniverseworld.item.StevenShieldItem;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.PinkStevenFutureRenderer;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldModElements;
@@ -96,6 +98,7 @@ public class PinkStevenFutureEntity extends StevenuniverseworldModElements.ModEl
 			experienceValue = 200;
 			setNoAI(false);
 			enablePersistence();
+			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(StevenShieldItem.block));
 		}
 
 		@Override

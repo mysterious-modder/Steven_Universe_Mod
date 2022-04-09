@@ -93,11 +93,11 @@
     },
     "spawnParticles": true,
     "particleToSpawn": {
-      "value": "WATER_SPLASH"
+      "value": "SNOW_SHOVEL"
     },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.999999998509884,
-    "particleAmount": 30,
+    "particleSpawningShape": "Tube",
+    "particleSpawningRadious": 1.9,
+    "particleAmount": 500,
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"126\" y=\"39\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_fly\"><field name=\"radius\">16</field><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",

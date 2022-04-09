@@ -57,7 +57,7 @@ public class StevenCalmDownProcedure {
 		Vida = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1);
 		if ((((Entity) world
 				.getEntitiesWithinAABB(GarnetEntity.CustomEntity.class,
-						new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
+						new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
 				.stream().sorted(new Object() {
 					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
@@ -74,8 +74,8 @@ public class StevenCalmDownProcedure {
 			}
 			if (((Entity) world
 					.getEntitiesWithinAABB(StevenUniverseFutureEntity.CustomEntity.class,
-							new AxisAlignedBB((entity.getPosX()) - (2 / 2d), (entity.getPosY()) - (2 / 2d), (entity.getPosZ()) - (2 / 2d),
-									(entity.getPosX()) + (2 / 2d), (entity.getPosY()) + (2 / 2d), (entity.getPosZ()) + (2 / 2d)),
+							new AxisAlignedBB((entity.getPosX()) - (10 / 2d), (entity.getPosY()) - (10 / 2d), (entity.getPosZ()) - (10 / 2d),
+									(entity.getPosX()) + (10 / 2d), (entity.getPosY()) + (10 / 2d), (entity.getPosZ()) + (10 / 2d)),
 							null)
 					.stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
@@ -84,8 +84,8 @@ public class StevenCalmDownProcedure {
 					}.compareDistOf((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()))).findFirst().orElse(null)) instanceof LivingEntity)
 				((LivingEntity) ((Entity) world
 						.getEntitiesWithinAABB(StevenUniverseFutureEntity.CustomEntity.class,
-								new AxisAlignedBB((entity.getPosX()) - (2 / 2d), (entity.getPosY()) - (2 / 2d), (entity.getPosZ()) - (2 / 2d),
-										(entity.getPosX()) + (2 / 2d), (entity.getPosY()) + (2 / 2d), (entity.getPosZ()) + (2 / 2d)),
+								new AxisAlignedBB((entity.getPosX()) - (10 / 2d), (entity.getPosY()) - (10 / 2d), (entity.getPosZ()) - (10 / 2d),
+										(entity.getPosX()) + (10 / 2d), (entity.getPosY()) + (10 / 2d), (entity.getPosZ()) + (10 / 2d)),
 								null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {

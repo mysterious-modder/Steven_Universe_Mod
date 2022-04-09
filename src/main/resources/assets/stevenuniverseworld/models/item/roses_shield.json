@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/rosesshield",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/rosesshieldtexture",
+    "particle": "stevenuniverseworld:items/rosesshielditem"
+  }
+}

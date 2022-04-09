@@ -1,0 +1,7 @@
+{
+  "parent": "stevenuniverseworld:custom/steven_shield_v2",
+  "textures": {
+    "0": "stevenuniverseworld:blocks/steven_shield_v2_texture",
+    "particle": "stevenuniverseworld:items/steven_shield_v2_item"
+  }
+}

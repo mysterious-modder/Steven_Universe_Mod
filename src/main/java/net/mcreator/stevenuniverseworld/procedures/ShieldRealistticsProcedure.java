@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.stevenuniverseworld.item.StevenShieldActivatedItem;
+import net.mcreator.stevenuniverseworld.item.RosesShieldActivatedItem;
 import net.mcreator.stevenuniverseworld.item.PinkDiamondShieldActivatedItem;
 import net.mcreator.stevenuniverseworld.StevenuniverseworldMod;
 
@@ -48,7 +50,11 @@ public class ShieldRealistticsProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-				.getItem() == PinkDiamondShieldActivatedItem.block) {
+				.getItem() == PinkDiamondShieldActivatedItem.block
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+						.getItem() == RosesShieldActivatedItem.block
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+						.getItem() == StevenShieldActivatedItem.block) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 2, (int) 4, (false), (false)));
 		}

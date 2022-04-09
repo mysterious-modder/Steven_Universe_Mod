@@ -1,5 +1,9 @@
 package net.mcreator.stevenuniverseworld.procedures;
 
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
+
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
@@ -52,40 +56,62 @@ public class FuseProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) > 0 && entity.isAlive() == true) {
-			if (((Entity) world
-					.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
-							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
-					.stream().sorted(new Object() {
-						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-						}
-					}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) {
-				if (!entity.world.isRemote())
-					entity.remove();
-				if (!((Entity) world
-						.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
-								new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
-						.stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null)).world.isRemote())
-					((Entity) world
+		new Object() {
+			private int ticks = 0;
+			private float waitTicks;
+			private IWorld world;
+
+			public void start(IWorld world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
+				this.world = world;
+			}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
+						run();
+				}
+			}
+
+			private void run() {
+				if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) > 0 && entity.isAlive() == true) {
+					if (((Entity) world
 							.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
-									new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), z - (6 / 2d), x + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
+									new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
 							.stream().sorted(new Object() {
 								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 								}
-							}.compareDistOf(x, y, z)).findFirst().orElse(null)).remove();
-				if (world instanceof ServerWorld) {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"summon stevenuniverseworld:garnet");
+							}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) {
+						if (!entity.world.isRemote())
+							entity.remove();
+						if (!((Entity) world.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
+								new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
+								.stream().sorted(new Object() {
+									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+										return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+									}
+								}.compareDistOf(x, y, z)).findFirst().orElse(null)).world.isRemote())
+							((Entity) world.getEntitiesWithinAABB(RubyEntity.CustomEntity.class,
+									new AxisAlignedBB(x - (10 / 2d), y - (10 / 2d), z - (10 / 2d), x + (10 / 2d), y + (10 / 2d), z + (10 / 2d)), null)
+									.stream().sorted(new Object() {
+										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+											return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+										}
+									}.compareDistOf(x, y, z)).findFirst().orElse(null)).remove();
+						if (world instanceof ServerWorld) {
+							((World) world).getServer().getCommandManager().handleCommand(
+									new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+											new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+									"summon stevenuniverseworld:garnet");
+						}
+					}
 				}
+				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}
+		}.start(world, (int) 20);
 	}
 }

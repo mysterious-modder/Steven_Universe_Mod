@@ -39,6 +39,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
+import net.mcreator.stevenuniverseworld.item.RosesShieldItem;
 import net.mcreator.stevenuniverseworld.item.RoseSwordItem;
 import net.mcreator.stevenuniverseworld.item.PinkShardItem;
 import net.mcreator.stevenuniverseworld.entity.renderer.StevenUniverseRenderer;
@@ -98,6 +99,7 @@ public class StevenUniverseEntity extends StevenuniverseworldModElements.ModElem
 			setNoAI(false);
 			enablePersistence();
 			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(RoseSwordItem.block));
+			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(RosesShieldItem.block));
 		}
 
 		@Override

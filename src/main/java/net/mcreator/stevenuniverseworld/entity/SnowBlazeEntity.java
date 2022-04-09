@@ -298,15 +298,11 @@ public class SnowBlazeEntity extends StevenuniverseworldModElements.ModElement {
 			Random random = this.rand;
 			Entity entity = this;
 			if (true)
-				for (int l = 0; l < 30; ++l) {
-					double d0 = (x + random.nextFloat());
-					double d1 = (y + random.nextFloat());
-					double d2 = (z + random.nextFloat());
-					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 0.999999998509884D;
-					double d4 = (random.nextFloat() - 0.5D) * 0.999999998509884D;
-					double d5 = (random.nextFloat() - 0.5D) * 0.999999998509884D;
-					world.addParticle(ParticleTypes.SPLASH, d0, d1, d2, d3, d4, d5);
+				for (int l = 0; l < 500; ++l) {
+					double d0 = (x + 0.5) + (random.nextFloat() - 0.5) * 1.9D;
+					double d1 = ((y + 0.7) + (random.nextFloat() - 0.5) * 1.9D * 100) + 0.5;
+					double d2 = (z + 0.5) + (random.nextFloat() - 0.5) * 1.9D;
+					world.addParticle(ParticleTypes.ITEM_SNOWBALL, d0, d1, d2, 0, 0, 0);
 				}
 		}
 	}
